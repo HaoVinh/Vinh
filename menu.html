@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo đọc</title>
+</head>
+<style>
+    #MainMenu {
+        background-color: gold;
+    }
+
+    #MainMenu ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+    }
+
+    #MainMenu ul li a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+        background: #aaa;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    /* Tạo position là mốc cho cái menu thứ 2  */
+    #MainMenu ul li {
+        width: 50%;
+        position: relative;
+    }
+
+    #MainMenu ul li a:hover {
+        background-color: gold;
+        transition: all 2s;
+    }
+
+    /* Trỏ chuột vào li thứ nhất(Tin tức) sẽ hiện ra 
+    li thứ 2(Thời sự , Quốc tế) ,
+    thẻ top là khoảng cách trên góc đầu 
+    giữa menu 1 và 2 */
+    #MainMenu ul li:hover ul  {
+        display: block;
+        top: 100%;
+    }
+    /* Chuyển ul sang chế độ none để ẩn menu cấp 2 */
+    #MainMenu ul ul {
+        display: none;
+        position: absolute;
+    }
+
+    /* Độ dài của li thứ 2 là 100% */
+    #MainMenu ul ul li {
+        min-width: 315px;
+    }
+    #MainMenu ul ul li a {
+        text-align: left;
+    }
+</style>
+
+<body>
+    <div id="MainMenu">
+        <ul>
+            <li>
+                <a href="/TinTuc/index.html">Tin tức</a>
+                <ul>
+                    <li>
+                        <a href="">Thời sự</a>
+                    </li>
+                    <li>
+                        <a href="">Quốc tế</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="/TinTuc/thoisu.html">Thời sự</a>
+                <ul>
+                    <li>
+                        <a href="">Nông nghiệp</a>
+                    </li>
+                    <li>
+                        <a href="">Thủy sản</a>
+                    </li>
+                </ul>
+            </li>
+            </li>
+            <li>
+                <a href="/TinTuc/timkiem.html">Tìm kiếm tin tức</a>
+            </li>
+            <li>
+                <a href="/TinTuc/tinmoi.html">Tin mới</a>
+            </li>
+        </ul>
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Accusamus quibusdam sequi ea consectetur, hic at minima facere
+        excepturi voluptatum laboriosam possimus molestias ipsa voluptas sunt in sed cumque placeat necessitatibus.
+    </p>
+</body>
+
+</html>
