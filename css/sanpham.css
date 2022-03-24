@@ -1,0 +1,188 @@
+.giacusanpham {
+    text-decoration: line-through;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.giasanpham {
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sanpham {
+    border: 1px solid #aaa;
+}
+
+.tensanpham {
+    font-size: 16px;
+    margin: 0px;
+    color: #000;
+    text-align: justify;
+}
+
+.sanpham .content {
+    padding: 5px 10px;
+}
+
+.sanpham .top-content img {
+    max-width: 100%;
+}
+
+.top-content {
+    position: relative;
+    min-height: 300px;
+    background: #000;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sanpham-hot,
+.sanpham-sale,
+.sanpham-hinh {
+    z-index: 1;
+    position: absolute;
+}
+
+.sanpham-hot,
+.sanpham-sale {
+    z-index: 2;
+    width: 100%;
+    background: red;
+    color: gold;
+    text-align: center;
+}
+
+.sanpham-hot {
+    width: auto;
+    padding: 3px 10px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.sanpham-sale {
+    transform: rotate(40deg);
+    right: -96px;
+    top: 16px;
+}
+
+/* bỏ dấu gạch chân của chữ */
+.content a {
+    text-decoration: none;
+}
+
+/* Tạo hiệu ứng rê chuột vào hình */
+.top-content .sanpham-hinh:hover {
+    transform: rotate(10deg);
+    max-width: 150% !important;
+    width: 120%;
+    top: -60px;
+    left: -21px;
+}
+
+/* Tạo độ trễ của chuyển động hiệu ứng */
+.top-content .sanpham-hinh {
+    transition: 1s;
+    top: 0px;
+    left: 0px;
+}
+.top-content:hover .sanpham-hot {
+    width: 100px !important;
+    transition: all 1s;
+}
+.btn.btn-muangay{
+    padding: 5px 10px;
+    /* hiển thị cùng dòng nhưng vùng tương tác là nội dung + padding */
+    display: inline-block;
+    background-color:blue ;
+    color: #fff;
+    margin: auto;
+}
+* {
+    box-sizing: border-box;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.col{
+    width: 25%;
+    max-width: 25%;
+    padding: 5px;
+}
+.sanpham {
+    box-shadow: 1px 1px 5px #aaa;
+}
+@media only screen and (max-width: 800px) {
+   
+    .giacuSanPham {
+        text-decoration: line-through;
+        font-size: 10px;
+        color: #aaa;
+    }
+    .top-content {
+        position: relative;
+        min-height: 100px;
+        background: #000;
+        width: 100%;
+        overflow: hidden;
+    }
+    .tensanpham{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .col {
+        width: 50%;
+        max-width: 50%;
+        padding: 5px;
+    }
+    .giacuSanPham {
+        text-decoration: line-through;
+        font-size: 10px;
+        color: #aaa;
+    }
+    .top-content {
+        position: relative;
+        min-height: 100px;
+        background: #000;
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .col {
+        width: 100%;
+        max-width: 100%;
+        padding: 5px;
+    }
+    .giacuSanPham {
+        text-decoration: line-through;
+        font-size: 10px;
+        color: #aaa;
+    }
+}
+.panel-title h2 {
+    margin: 0px;
+    border-bottom: 2px solid gold;
+    font-size: 16px;
+    position: relative;
+    height: 30px;
+    /* Độ cao của dòng */
+    line-height: 30px;
+    color: #fff;
+    padding-left: 10px;
+}
+.panel-title h2::before {
+    content: "";
+    width: 200px;
+    top:0px;
+    left: 0px;
+    height: 30px;
+    position: absolute;
+    background: gold;
+    z-index: -1;
+}
